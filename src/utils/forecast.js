@@ -8,7 +8,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if(body.error) {
             callback("Incorrect/Incomplete coordinates given.", undefined)
         } else {
-            callback(undefined, body.daily.data[0].summary + " It is currently " + body.currently.temperature + " degrees out. There is a " + body.currently.precipProbability + "% chance of rain.")
+            callback(undefined, body.daily.data[0].summary + " It is currently " + body.currently.temperature + " degrees out. There is a " + body.currently.precipProbability + "% chance of rain. Temperature high will be " + body.daily.data[0].temperatureHigh + ", and temperature low will be at " + body.daily.data[0].temperatureLow + ".")
         }
     })
 }
