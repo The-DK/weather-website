@@ -99,10 +99,6 @@ app.get("*", (req, res) => {
     })
 })
 
-// app.com
-// app.com/home
-// app.com/about
-
 app.listen(port, () => {
     console.log("Server is up on port " + port)
 })
